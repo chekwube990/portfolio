@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- laptop view -->
+<nav class="logo">
+    <div class="logo">
+         <!-- <img src="img/images.jpeg" alt="">  -->
+         <a href="#">CHEKWUBE</a>
+    </div>
+    <div class="navDiv">
+    </div>
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="show">
+        <i class="ri-menu-3-fill"></i>
+    </div>
+</nav>
+
+<!-- mobile view  -->
+<nav class="mobile-navbar">
+    <header>
+        <div class="logo">
+             <!-- <img src="img/images.jpeg" alt="">  -->
+        </div>
+        <div class="navDiv">
+            <div class="hamburger" id="hide">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+</nav>
+
+    <div class="container">
+        <!-- banner -->
+        <div class="banner" id="home">
+            <div class="content">
+                <p>WELCOME TO MY PORTFOLIO</p>
+                <h1>Hello, i'm Adigwe Dev <br>
+                    a
+                    <div class="gradientText">
+                        <div class="job" data-job1="{Developer.}" data-job2="{FrontEnd.}"></div>
+                    </div>
+                </h1>
+                <p>Web developers create and maintain websites. They are also responsible for the site's technical
+                    aspects, such as it's performance and capacity, which are measures of a website's speed and how much
+                    traffic the site can handle. in addition, web developers may create content for the site</p>
+                <div class="find">
+                    <h3>CONTACT WITH ME</h3>
+                    <ul>
+                        <li><i class="ri-facebook-fill"></i></li>
+                        <li><i class="ri-whatsapp-fill"></i></li>
+                        <li><i class="ri-twitter-fill"></i></li>
+                        <li><i class="ri-github-fill"></i></li>
+                </div>
+
+            </div>
+            <div class="avatar">
+                <img src="img/cc.jpg" alt="">
+            </div>
+        </div>
+        <!-- skill -->
+        <div id="skill">
+            <div class="title">SKILL</div>
+            <div class="listSkill">
+                <div class="item">
+                    <div class="name">HTML5</div>
+                    <div class="evaluate" style="--point: 80%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">CSS3</div>
+                    <div class="evaluate" style="--point: 70%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">JavaScript</div>
+                    <div class="evaluate" style="--point: 80%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">PHP</div>
+                    <div class="evaluate" style="--point: 90%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">ReactJS</div>
+                    <div class="evaluate" style="--point: 60%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">VueJS</div>
+                    <div class="evaluate" style="--point: 70%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">AngularJS</div>
+                    <div class="evaluate" style="--point: 60%"></div>
+                </div>
+
+                <div class="item">
+                    <div class="name">Laravel</div>
+                    <div class="evaluate" style="--point: 80%"></div>
+                </div>
+            </div>
+        </div>
+        <!-- project -->
+        <div id="project">
+            <div class="title">PROJECT</div>
+            <div class="listproject">
+                <div class="item">
+                    <img src="img/pt6.jpeg" alt="">
+                    <div class="name">
+                        Name Project
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/pt1.jpeg" alt="">
+                    <div class="name">
+                        Name Project
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/pt2.jpeg" alt="">
+                    <div class="name">
+                        Name Project
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/pt3.jpeg" alt="">
+                    <div class="name">
+                        Name Project
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/pt4.jpeg" alt="">
+                    <div class="name">
+                        Name Project
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/pt5.jpeg" alt="">
+                    <div class="name">
+                        Name Project
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact -->
+        <div id="contact">
+            <div class="title">CONTACT</div>
+            <ul class="Contact">
+                <li><i class="ri-facebook-fill"></i></li>
+                <li><i class="ri-whatsapp-fill"></i></li>
+                <li><i class="ri-twitter-fill"></i></li>
+                <li><i class="ri-github-fill"></i></li>
+        </div>
+    </div>
+
+    <script>
+        //dom
+        const menuShowBtn = document.getElementById("show"),
+            menuCloseBtn = document.getElementById("hide"),
+            mobileNav = document.querySelector(".mobile-navbar");
+
+        const navlinks = document.querySelectorAll(".mobile-navbar header ul a");
+
+        //click Events
+        //Showing Mobile Nav
+        menuShowBtn.addEventListener("click", () => {
+            mobileNav.style.left = "0";
+        });
+
+        const closeNav = () => {
+            mobileNav.style.left = "-100%";
+        }
+        // Hiding Mobile Nav
+        menuCloseBtn.addEventListener("click", closeNav);
+
+        navlinks.forEach(navlink => {
+            navlink.addEventListener("click", closeNav);
+        })
+    </script>
+</body>
+
+</html>
